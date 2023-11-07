@@ -8,6 +8,11 @@ module.exports = {
       fontFamily: {
         sst: ['SST'],
       },
+      gridTemplateRows: {
+        '5': 'repeat(5, minmax(103px, 1fr))',
+        '7': 'repeat(7, minmax(103px, 1fr))',
+        '4': 'repeat(4, minmax(103px, 1fr))',
+      },
       backgroundImage: {
         'header-cover': "url('./assets/images/header.jpeg')"
       },

@@ -1,8 +1,8 @@
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Layout from './layouts/Layout';
 import Home from './pages/Home';
-import NewRegistration from './pages/NewRegistration';
 import NotFound from './pages/NotFound';
+import NewRegistration from './pages/NewRegistration';
 
 function App() {
   return (
