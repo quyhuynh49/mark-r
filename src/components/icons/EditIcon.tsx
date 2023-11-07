@@ -1,10 +1,10 @@
 import React from 'react'
 
-type ValidationIconProps = {
+type EditIconProps = {
     className?: string;
 }
 
-function ValidationIcon({ className }: ValidationIconProps) {
+function EditIcon({ className }: EditIconProps) {
     return (
         <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16.6121 12.7182V18.3883L12.0143 23H1.68807C1.3112 23 1.0097 22.6976 1.0097 22.3196V1.68041C0.934328 1.30241 1.3112 1 1.68807 1H15.9337C16.3106 1 16.6121 1.30241 16.6121 1.68041V3.11684" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
@@ -24,4 +24,4 @@ function ValidationIcon({ className }: ValidationIconProps) {
     )
 }
 
-export default ValidationIcon
+export default EditIcon

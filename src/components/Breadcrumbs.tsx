@@ -22,14 +22,10 @@ function Breadcrumbs({ className }: BreadcrumbsProps) {
                             <Link className='font-[700]' to={crumbLink} key={crumb}>{crumb.split('-').map(x => x[0].toUpperCase() + x.slice(1)).join(' ')}</Link>
                         </li>
                     ) : (
-                        <React.Fragment>
-                            <li key={index}>
-                                <Link to={crumbLink} key={crumb}>{crumb.split('-').map(x => x[0].toUpperCase() + x.slice(1)).join(' ')}</Link>
-                            </li>
-                            <li>
-                                <span>/</span>
-                            </li>
-                        </React.Fragment>
+                        <li key={index} className='flex gap-[10px]'>
+                            <Link to={crumbLink} key={crumb}>{crumb.split('-').map(x => x[0].toUpperCase() + x.slice(1)).join(' ')}</Link>
+                            <span>/</span>
+                        </li>
                     )
                 })}
             </ol>

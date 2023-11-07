@@ -3,9 +3,9 @@ import Breadcrumbs from '../components/Breadcrumbs'
 import CustomLink from '../components/CustomLink'
 import Input from '../components/Input'
 import Logo from '../components/Logo'
+import EditIcon from '../components/icons/EditIcon'
 import HomeIcon from '../components/icons/HomeIcon'
 import SearchIcon from '../components/icons/SearchIcon'
-import ValidationIcon from '../components/icons/ValidationIcon'
 
 function Header() {
     return (
@@ -15,7 +15,7 @@ function Header() {
                     <Logo />
                     <div className='flex gap-[10px]'>
                         <CustomLink startAdornment={<HomeIcon />} to="/home">Home</CustomLink>
-                        <CustomLink startAdornment={<ValidationIcon />} to="/home/registration-database/new-registration">Registration Database</CustomLink>
+                        <CustomLink startAdornment={<EditIcon />} to="/home/registration-database/new-registration">Registration Database</CustomLink>
                     </div>
                 </div>
                 <div className='flex'>
@@ -28,8 +28,6 @@ function Header() {
             </div>
             <Breadcrumbs className='container mb-[32px]' />
         </header>
-
-
     )
 }
 

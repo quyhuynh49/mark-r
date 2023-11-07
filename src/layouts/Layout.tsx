@@ -9,10 +9,8 @@ function Layout({ children }: LayoutProps) {
     return (
         <React.Fragment>
             <Header />
-            <main className='relative top-[-20px] container'>
-                <div className='shadow-page'>
-                    {children}
-                </div>
+            <main className='relative top-[-20px] container p-0 shadow-page'>
+                {children}
             </main>
         </React.Fragment>
     )
