@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react'
 import Input from '../../../../components/MarkR/Input';
-import Dropdown from '../../../../components/MarkR/Dropdown';
+import DropdownSelect from '../../../../components/MarkR/DropdownSelect';
 
 type MainInfoProps = {
     className?: string;
@@ -10,7 +10,8 @@ type MainInfoProps = {
 function MainInfo({ className }: MainInfoProps) {
     return (
         <section className={clsx('grid grid-cols-5 grid-rows-5 gap-[10px]', className)}>
-            <div className="border"><Dropdown /></div>
+            <DropdownSelect />
+            
             <div className="border row-span-3">2</div>
             <div className="border row-span-3">3</div>
             <div className="border row-span-3">4</div>
