@@ -6,7 +6,6 @@ import NewRegistration from './pages/NewRegistration';
 
 function App() {
   return (
-
     <Router>
       <Layout>
         <Routes>
