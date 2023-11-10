@@ -15,9 +15,10 @@ type MultiselectPickListProps = {
         data_field_4: string;
     }[];
     className?: string;
+    variant?: 'main' | 'secondary';
 }
 
-export default function Index({ title, placeholder, data, className }: MultiselectPickListProps) {
+export default function Index({ title, placeholder, data, className, variant }: MultiselectPickListProps) {
     const [isDropdownDisplayed, setIsDropdownDisplayed] = useState(false);
     const [selectedDataFields, setSelectedDataFields] = useState<Record<string, boolean>>(
         data.reduce((obj, datafield) => ({ ...obj, [datafield.data_field_1]: false }), {})
@@ -49,15 +50,18 @@ export default function Index({ title, placeholder, data, className }: Multisele
     }
 
     return (
-        <div className={clsx('relative w-full h-full bg-[#F2F7FF] rounded-[15px] p-[10px]', className)}>
+        <div className={clsx('relative w-full h-full rounded-[15px] p-[10px]', className,
+            MAPPING_MULTISELECT_PICKLIST_WRAPPER_STYLE_DEFAULT[variant || 'main']
+        )}>
             <div className='flex justify-between items-center'>
                 <div className='font-sst font-[700] text-[14px] text-[#003C71]'>{title.toUpperCase()}</div>
                 <button onClick={() => setIsDropdownDisplayed(preState => !preState)}><DropdownIcon /></button>
-
             </div>
             <button
                 onClick={() => setIsDropdownDisplayed(preState => !preState)}
-                className='w-full mt-[16px] font-sst font-[500] text-[16px] text-[#9AC2FE] flex flex-col gap-[5px]'>
+                className={clsx('w-full mt-[16px] font-sst font-[500] text-[16px] flex flex-col gap-[5px]',
+                    MAPPING_MULTISELECT_PICKLIST_STYLE_DEFAULT[variant || 'main']
+                )}>
                 {results.length === 0 ? placeholder : results.map((el) => {
                     return <div key={el.data_field_1}>
                         <DataList obj_data={el} />
@@ -101,4 +105,15 @@ export default function Index({ title, placeholder, data, className }: Multisele
             )}
         </div>
     )
+}
+
+
+const MAPPING_MULTISELECT_PICKLIST_WRAPPER_STYLE_DEFAULT: { [key: string]: string } = {
+    main: 'bg-[#F2F7FF]',
+    secondary: 'bg-[#F2F2F2]'
+}
+
+const MAPPING_MULTISELECT_PICKLIST_STYLE_DEFAULT: { [key: string]: string } = {
+    main: 'bg-[#F2F7FF] text-[#9AC2FE]',
+    secondary: 'bg-[#F2F2F2] text-[#CCCCCC]'
 }

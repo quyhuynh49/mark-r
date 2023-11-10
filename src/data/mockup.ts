@@ -217,3 +217,25 @@ export const LICENSE_MARKET = [
 export const REFERENCE_COUNTRY = [
     "Brunei", "Campuchia", "Indonesia", "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore", "Thailand", "Vietnam"
 ];
+
+
+/* Secondary */
+export const RULE = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16',];
+
+/* Special Access */
+export const SA_TYPE = [
+    'New Full',
+    'New Abridge',
+    'New Expedited',
+    'New Partial 1',
+    'New Partial 2',
+    'New Concise',
+    'New Reliance',
+    'Renewal',
+    'New-Change Notification',
+    'Change Notification',
+    'Special Access',
+    'Non-MD',
+    'CMDN',
+    'CMDR',
+]

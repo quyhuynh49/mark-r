@@ -9,9 +9,12 @@ module.exports = {
         sst: ['SST'],
       },
       gridTemplateRows: {
-        '5': 'repeat(5, minmax(103px, 1fr))',
-        '7': 'repeat(7, minmax(103px, 1fr))',
+        '1': 'repeat(1, minmax(103px, 1fr))',
+        '2': 'repeat(2, minmax(103px, 1fr))',
         '4': 'repeat(4, minmax(103px, 1fr))',
+        '5': 'repeat(5, minmax(103px, 1fr))',
+        '6': 'repeat(6, minmax(103px, 1fr))',
+        '7': 'repeat(7, minmax(103px, 1fr))',
       },
       backgroundImage: {
         'header-cover': "url('./assets/images/header.jpeg')"
