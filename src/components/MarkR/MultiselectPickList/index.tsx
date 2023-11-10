@@ -48,7 +48,9 @@ export default function Index({ title, placeholder, data, className, variant }: 
         /* close popup */
         setIsDropdownDisplayed(false);
     }
-
+    const handleOnClickChecked = (event: React.MouseEvent<HTMLLabelElement, MouseEvent>) => {
+        event.stopPropagation();
+    }
     return (
         <div className={clsx('relative w-full h-full rounded-[15px] p-[10px]', className,
             MAPPING_MULTISELECT_PICKLIST_WRAPPER_STYLE_DEFAULT[variant || 'main']
@@ -87,7 +89,7 @@ export default function Index({ title, placeholder, data, className, variant }: 
                                         checked={selectedDataFields[datafield.data_field_1]}
                                         id={`input-${datafield.data_field_1}`}
                                         type="checkbox" />
-                                    <label className='font-sst font-[700]' htmlFor={`input-${datafield.data_field_1}`}>{datafield.data_field_1}</label>
+                                    <label onClick={(event) => handleOnClickChecked(event)} className='font-sst font-[700]' htmlFor={`input-${datafield.data_field_1}`}>{datafield.data_field_1}</label>
                                 </div>
                             )
                         })}
